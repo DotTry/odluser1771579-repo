@@ -1,0 +1,10 @@
+#!/bin/bash
+
+WIZCLI="C:/Users/Administrator/WIZCLI/wizcli.exe"
+
+# Auth to Wiz CLI 
+SECRETS_TEST=$($WIZCLI dir scan --path . --policy 'odluser1771579-vuln-block' --tag odluser1771579)
+
+if [ $? -ne 0 ]; then
+  exit 1
+fi
